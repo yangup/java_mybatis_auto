@@ -1,0 +1,38 @@
+package -packageSer-;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * -modelComment-<br>
+ * @service<br>
+ * @className：-modelName-Ser<br> 
+ * @auto-generated<br>
+ */
+@Service
+public class -modelName-Service{
+
+	private static final Logger logger = LoggerFactory.getLogger(-modelName-Service.class);
+	
+	@Autowired
+	private -modelName-Mapper -modelNameParam-Mapper;
+
+    public int createEntity(-modelName-Entity entity){
+    	return -modelNameParam-Mapper.createEntity(entity); 
+    }
+
+    public int updateEntity(-modelName-Entity entity){
+    	return -modelNameParam-Mapper.updateEntity(entity); 
+    }
+    
+    public int removeById(long id){
+    	return -modelNameParam-Mapper.removeById(id); 
+    }
+    
+    public -modelName-Entity findById(long id){
+    	return -modelNameParam-Mapper.findById(id); 
+    }
+	
+}

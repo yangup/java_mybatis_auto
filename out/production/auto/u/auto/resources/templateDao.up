@@ -1,0 +1,36 @@
+package -packageDao-;
+
+import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
+
+
+/**
+ * -modelComment-<br>
+ * @mapper<br>
+ * @className：-modelName-<br>
+ * @auto-generated<br>
+ */
+@Mapper
+@Repository
+public interface -modelName-Mapper{
+	
+	@Insert(" INSERT INTO -tableName- (" +
+		    "-sqlFieldRaw-" +
+            " ) VALUES (" +
+            "-sqlFieldValue-" +
+            " )")
+    @Options(useGeneratedKeys = true)
+    int createEntity(-modelName-Entity entity);
+
+    @Update(" update -tableName- set" +
+    		"-sqlFieldNameValue-" +
+            " where id = #{id}")
+    int updateEntity(-modelName-Entity entity);
+    
+    @Delete("delete FROM -tableName- WHERE id = #{id}")
+    int removeById(@Param("id") long id);
+    
+    @Select("SELECT * FROM -tableName- WHERE id = #{id} LIMIT 1")
+    -modelName-Entity findById(@Param("id") long id);
+	
+}

@@ -1,0 +1,36 @@
+package com.sulu.biz.sms;
+
+import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
+
+
+/**
+ *  <br>
+ * @mapper<br>
+ * @className：RolePrivilege<br>
+ * @auto-generated<br>
+ */
+@Mapper
+@Repository
+public interface RolePrivilegeMapper{
+	
+	@Insert(" INSERT INTO -tableName- (" +
+		    "-sqlFieldRaw-" +
+            " ) VALUES (" +
+            "-sqlFieldValue-" +
+            " )")
+    @Options(useGeneratedKeys = true)
+    int createEntity(RolePrivilegeEntity entity);
+
+    @Update(" update -tableName- set" +
+    		"-sqlFieldNameValue-" +
+            " where id = #{id}")
+    int updateEntity(RolePrivilegeEntity entity);
+    
+    @Delete("delete FROM -tableName- WHERE id = #{id}")
+    int removeById(@Param("id") long id);
+    
+    @Select("SELECT * FROM -tableName- WHERE id = #{id} LIMIT 1")
+    RolePrivilegeEntity findById(@Param("id") long id);
+	
+}

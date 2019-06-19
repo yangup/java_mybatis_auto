@@ -1,0 +1,20 @@
+package -packageModel-;
+
+import java.io.Serializable;
+import java.sql.*;
+import java.math.*;
+
+import lombok.Data;
+
+/**
+ * -modelComment-<br>
+ * @model<br>
+ * @className：-modelName-<br> 
+ * @auto-generated<br>
+ */
+@Data
+public class -modelName-Entity {
+	
+
+	-startField-
+}
